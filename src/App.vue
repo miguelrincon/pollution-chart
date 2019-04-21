@@ -7,6 +7,9 @@
       <a href="#" v-on:click="fetchData('beijingair')">Load Beijing Data</a> | 
       <a href="#" v-on:click="fetchData('cgshanghaiair')">Load Shangai data</a>
     </p>
+    <p>
+      <a href="https://miguelrincon.github.io" target="_blank">miguelrincon.github.io</a>
+    </p>
   </div>
 </template>
 

@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "precopy": "rm -rf ../miguelrincon.github.io/pages/pollution-chart/",
-    "copy": "mkdir ../miguelrincon.github.io/pages/pollution-chart/ && cp ./dist/**/* ../miguelrincon.github.io/pages/pollution-chart/"
+    "copy": "mkdir ../miguelrincon.github.io/pages/pollution-chart/ && cp -r ./dist/ ../miguelrincon.github.io/pages/pollution-chart/"
   },
   "dependencies": {
     "axios": "^0.18.0",
