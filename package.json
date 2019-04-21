@@ -5,11 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "precopy": "rm -rf ../miguelrincon.github.io/pages/pollution-chart/",
+    "copy": "mkdir ../miguelrincon.github.io/pages/pollution-chart/ && cp ./dist/**/* ../miguelrincon.github.io/pages/pollution-chart/"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "echarts": "^4.2.1",
+    "vue": "^2.6.10",
+    "vue-echarts": "^4.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
