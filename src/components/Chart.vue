@@ -140,8 +140,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .v-chart{
   width: 100%;
+}
+.echarts{
+  width: 80%;
+  margin: 0 auto;
 }
 .current{
   border-radius: 10px;
@@ -157,4 +162,5 @@ export default {
 .current.high{background-color: #cc0033}
 .current.bad{background-color: #660099}
 .current.hazard{background-color: #7e0023}
+
 </style>
