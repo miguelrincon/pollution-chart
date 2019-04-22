@@ -1,4 +1,4 @@
-# What's the pollution today? Here, a chart
+# 🏭 Pollution? Here's a chart.
 
 Using Echarts and VueJS to display pollution data from Twitter.
 

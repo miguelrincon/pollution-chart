@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <h1>Current Air Quality</h1>
+    <h1>🏭 Pollution? Here's a chart.</h1>
     <Chart class="chart" v-bind:chart-data="chartData"/>
     <p>{{status}}</p>
     <p>
-      <a href="#" v-on:click="fetchData('beijingair')">Load Beijing Data</a> | 
+      <a href="#" v-on:click="fetchData('beijingair')">Load Beijing Data</a> |
       <a href="#" v-on:click="fetchData('cgshanghaiair')">Load Shangai data</a>
     </p>
     <p>
       <strong>
-        VueJS + Echarts to display pollution data from Twitter, more at
-        <a href="https://miguelrincon.github.io" target="_blank">miguelrincon.github.io</a>
+        VueJS + Echarts to display pollution data from Twitter by
+        <a href="https://miguelrincon.github.io/" target="_blank">miguelrincon</a>, more at
+        <a href="https://github.com/miguelrincon/pollution-chart" target="_blank">Github</a>
       </strong>
     </p>
   </div>
