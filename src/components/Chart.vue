@@ -1,5 +1,10 @@
 <template>
-  <v-chart :options="options"/>
+  <div>
+    <span class="current" v-bind:class="currentLevel">
+      {{chartData[chartData.length-1][1]}}
+    </span>
+    <v-chart :options="options"/>
+  </div>
 </template>
 <script>
 import ECharts from "vue-echarts"; // refers to components/ECharts.vue in webpack
@@ -26,6 +31,28 @@ export default {
       this.options.series.data = this.chartData.map(item => item[1])
     }
   },
+  computed: {
+    currentLevel: function () {
+      const lastMeasurement = this.chartData[this.chartData.length-1][1];
+      let level = 'good'
+      if (lastMeasurement > 50){
+        level = 'ok'
+      }
+      if (lastMeasurement > 100){
+        level = 'warn'
+      }
+      if (lastMeasurement > 150){
+        level = 'high'
+      }
+      if (lastMeasurement > 200){
+        level = 'bad'
+      }
+      if (lastMeasurement > 300){
+        level = 'hazard'
+      }
+      return level;
+    }
+  },
   data() {
     return {
       options: {
@@ -38,12 +65,9 @@ export default {
         yAxis: {
           min: 0,
           max: 400,
-          splitLine: {
-            show: false
-          }
         },
         toolbox: {
-          left: "center",
+          left: 50,
           feature: {
             saveAsImage: {
               title: 'Save as .png'
@@ -94,21 +118,16 @@ export default {
           data: this.chartData.map(item => item[1]),
           markLine: {
             silent: true,
+            symbol: 'none',
+            lineStyle: {
+              color: '#aaa',
+            },
             data: [
               {
                 yAxis: 50
               },
               {
-                yAxis: 100
-              },
-              {
                 yAxis: 150
-              },
-              {
-                yAxis: 200
-              },
-              {
-                yAxis: 300
               }
             ]
           }
@@ -124,4 +143,18 @@ export default {
 .v-chart{
   width: 100%;
 }
+.current{
+  border-radius: 10px;
+  background-color: #999;
+  font-size: 150%;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.current.good{background-color: #096}
+.current.ok{background-color: #ffde33; color: black}
+.current.warn{background-color: #ff9933}
+.current.high{background-color: #cc0033}
+.current.bad{background-color: #660099}
+.current.hazard{background-color: #7e0023}
 </style>

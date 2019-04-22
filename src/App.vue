@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Using Echarts and VueJS to display pollution data from Twitter
+    <h1>Current Air Quality</h1>
     <Chart class="chart" v-bind:chart-data="chartData"/>
     <p>{{status}}</p>
     <p>
@@ -8,7 +8,10 @@
       <a href="#" v-on:click="fetchData('cgshanghaiair')">Load Shangai data</a>
     </p>
     <p>
-      <a href="https://miguelrincon.github.io" target="_blank">miguelrincon.github.io</a>
+      <strong>
+        VueJS + Echarts to display pollution data from Twitter, more at
+        <a href="https://miguelrincon.github.io" target="_blank">miguelrincon.github.io</a>
+      </strong>
     </p>
   </div>
 </template>
