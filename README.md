@@ -2,11 +2,13 @@
 
 Using Echarts and VueJS to display pollution data from Twitter.
 
-#### [See Demo](https://miguelrincon.github.io/pages/pollution-chart/index.html)
+#### [Online version](https://miguelrincon.github.io/pages/pollution-chart/index.html)
 
 ## A screenshot for busy folks
-![Sample](./doc/chart.png)
-*Took this one on a good day!*
+
+![Pollution Chart](./doc/chart.png)
+
+*Oh no Beijing! Stop!*
 
 ## Project setup
 ```sh
